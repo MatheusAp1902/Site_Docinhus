@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docinhus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffefd9; /* Fundo com a cor #ffefd9 */
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            width: 100%;
+            max-width: 800px; /* Define a largura máxima do cabeçalho */
+            margin: 0 auto; /* Centraliza o cabeçalho */
+            background-color: #ffefd9(255, 255, 255, 0.8); /* Fundo do cabeçalho */
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-img {
+            width: 95px; /* Ajuste o tamanho conforme necessário */
+            height: auto;
+            margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+        }
+        .logo-text {
+            margin: 0; /* Remover margem padrão do h1 */
+        }
+        nav {
+            display: flex;
+        }
+        nav a {
+            color: #503106;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #fbd38d; /* Cor de fundo ao passar o mouse */
+        }
+        section {
+            padding: 20px;
+            max-width: 800px; /* Define a largura máxima da seção */
+            margin: 0 auto 20px; /* Centraliza e define o espaçamento inferior */
+            position: relative;
+            overflow: hidden;
+            background-color: #ffefd9(255, 255, 255, 0.8); /* Fundo das seções */
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel img {
+            width: 100%;
+            height: auto;
+            margin-top: 10px; /* Ajuste o espaçamento superior */
+            margin-bottom: 10px; /* Ajuste o espaçamento inferior */
+        }
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #ffefd9(255, 255, 255, 0.5);
+            padding: 10px;
+            border-radius: 50%;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .prev:hover,
+        .next:hover {
+            background-color: #ffefd9(255, 255, 255, 0.8);
+        }
+        .prev {
+            left: 10px;
+        }
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="WhatsApp Image 2024-02-13 at 19.06.15.jpeg" alt="Logo" class="logo-img">
+            <h1 class="logo-text">Docinhus</h1>
+        </div>
+        <nav>
+            <a href="#about">Sobre Nós</a>
+            <a href="contato.html">Contato</a> <!-- Alterado: Link para a página de contato -->
+            <a href="cardápio.html">Cardápio</a>
+            <a href="https://wa.me/5511919659603" target="_blank">WhatsApp</a> <!-- Adicionado: Link para o WhatsApp -->
+            <a href="https://www.instagram.com/docinhuu.s">Instagram</a>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>Sobre Nós</h2>
+            <p>Em 2019 Eu, Matheus juntamente da senhorita Gabriele demos início em um novo desafio, criar um mini negócio. Nossa ideia desde sempre foi voltado para doces e começamos então com a confeitaria de Trufas, porém nossos clientes mereciam coisas novas conforme nossos estudos aprimoramos para brownies, desde pedaços com recheio ou banhados em chocolate até em brownies no pote. Pelos potes terem tido uma aceitação gigante colocamos em nosso cardápio bolos de pote. Nosso começo foi com sabores simples e clássicos porém com alguns estudos através de cursos aprendemos novos sabores. Hoje nossa marca conta com mais de 10 recheios diferentes e muito saborosos. Neste ano de 2024 somos uma empresa pequena ainda mas possuímos uma aceitação cada vez maior na cidade e continuamos levando nossos doces para alcançar mais pessoas possíveis.</p>
+            <div class="carousel-container">
+                <button class="prev" onclick="plusSlides(-1)">❮</button>
+                <div class="carousel">
+                    <img class="mySlides" src="WhatsApp Image 2024-02-13 at 19.08.57.jpeg" alt="Sobre Nós">
+                    <img class="mySlides" src="WhatsApp Image 2024-02-13 at 19.06.28 (4).jpeg" alt="Sobre Nós">
+                    <img class="mySlides" src="WhatsApp Image 2024-02-13 at 19.07.15.jpeg" alt="Sobre Nós">
+                    <img class="mySlides" src="WhatsApp Image 2024-02-13 at 19.07.17.jpeg" alt="Sobre Nós">
+                    <img class="mySlides" src="WhatsApp Image 2024-02-13 at 19.08.35 (1).jpeg" alt="Sobre Nós">
+                    <img class="mySlides" src="WhatsApp Image 2024-02-13 at 19.08.35.jpeg" alt="Sobre Nós">
+                </div>
+                <button class="next" onclick="plusSlides(1)">❯</button>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Redes Sociais</h2>
+            <p>Siga-nos nas redes sociais para ficar por dentro das novidades:</p>
+            <ul>
+                <li>Instagram: <a href="https://www.instagram.com/docinhuu.s">@docinhuu.s</a></li>
+            </ul>
+            <img src="WhatsApp Image 2024-02-13 at 19.05.15 (1).jpeg" alt="Redes Sociais">
+        </section>
+    </main>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 15000); // Change image every 15 seconds
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+    </script>
+</body>
+</html>

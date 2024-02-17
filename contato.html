@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Docinhus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffefd9;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            width: 100%;
+            max-width: 800px; /* Define a largura máxima do cabeçalho */
+            margin: 0 auto; /* Centraliza o cabeçalho */
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-img {
+            width: 95px; /* Ajuste o tamanho conforme necessário */
+            height: auto;
+            margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+        }
+        .logo-text {
+            margin: 0; /* Remover margem padrão do h1 */
+        }
+        nav {
+            display: flex;
+        }
+        nav a {
+            color: #503106;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #fbd38d; /* Cor de fundo ao passar o mouse */
+        }
+        .whatsapp-btn {
+            background-color: #ffefd9; /* Cor do botão de WhatsApp */
+            color: #503106; /* Cor do texto do botão de WhatsApp */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* Remove sublinhado */
+            display: inline-block; /* Permite definir largura e altura */
+            margin-left: 10px; /* Adiciona margem à esquerda */
+        }
+        .whatsapp-btn:hover {
+            background-color: #fbd38d; /* Cor do botão de WhatsApp ao passar o mouse */
+        }
+        section {
+            padding: 20px;
+            max-width: 800px; /* Define a largura máxima da seção */
+            margin: 0 auto 20px; /* Centraliza e define o espaçamento inferior */
+        }
+        form {
+            background-color: #ffefd9;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #503106;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #503106;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #321e0f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="WhatsApp Image 2024-02-13 at 19.06.15.jpeg" alt="Logo" class="logo-img">
+            <h1 class="logo-text">Docinhus</h1>
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="cardápio.html">Cardápio</a>
+            <a href="contato.html">Contato</a>
+            <a href="https://www.instagram.com/docinhuu.s">Instagram</a>
+            <a href="https://wa.me/5511919659603" class="whatsapp-btn" target="_blank">WhatsApp</a> <!-- Botão de WhatsApp -->
+        </nav>
+    </header>
+    <section>
+        <h2>Entre em Contato</h2>
+        <form action="mailto:matheus_ap.01@hotmail.com" method="post" enctype="text/plain">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone">
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto" required>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+</body>
+</html>
